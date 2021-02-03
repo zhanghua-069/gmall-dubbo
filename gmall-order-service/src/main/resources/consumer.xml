@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--扫描项目包，加载bean-->
+    <context:component-scan base-package="com.fleexy.dubbo.gmall" />
+
+    <dubbo:application name="gmall-order-service" ></dubbo:application>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" />
+
+    <!--声明需要调用的远程服务；生成远程服务代理-->
+    <dubbo:reference interface="com.fleexy.dubbo.gmall.service.UserService" id="userService"></dubbo:reference>
+</beans>
