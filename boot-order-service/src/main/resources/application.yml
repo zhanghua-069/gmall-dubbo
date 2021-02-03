@@ -1,0 +1,10 @@
+server:
+  port: 8082
+
+dubbo:
+  application:
+    name: boot-order-service
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  monitor: ## 连接到监控中心
+    protocol: registry

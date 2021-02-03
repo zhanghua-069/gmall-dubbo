@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 
-public class MainApplication {
+public class ConsumerMainApplication {
 
     public static void main(String[] args) throws IOException {
         ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("consumer.xml");

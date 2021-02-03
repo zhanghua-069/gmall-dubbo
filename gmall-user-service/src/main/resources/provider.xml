@@ -21,4 +21,7 @@
 
     <bean id="userServiceImpl" class="com.fleexy.dubbo.gmall.service.impl.UserServiceImpl" />
 
+    <!--连接监控中心，表示从注册中心发现监控中心地址-->
+    <dubbo:monitor protocol="registry" />
+
 </beans>

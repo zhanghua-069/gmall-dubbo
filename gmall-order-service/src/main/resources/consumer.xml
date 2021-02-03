@@ -15,4 +15,9 @@
 
     <!--声明需要调用的远程服务；生成远程服务代理-->
     <dubbo:reference interface="com.fleexy.dubbo.gmall.service.UserService" id="userService"></dubbo:reference>
+
+    <!--连接监控中心，表示从注册中心发现监控中心地址-->
+    <dubbo:monitor protocol="registry" />
+    <!--直接监控中心服务器地址-->
+    <!--<dubbo:monitor address="127.0.0.1:7070" />-->
 </beans>
