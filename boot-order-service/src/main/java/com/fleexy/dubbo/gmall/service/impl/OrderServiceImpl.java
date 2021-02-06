@@ -1,11 +1,11 @@
 package com.fleexy.dubbo.gmall.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.alibaba.dubbo.config.annotation.Service;
 import com.fleexy.dubbo.gmall.bean.UserAddress;
 import com.fleexy.dubbo.gmall.service.OrderService;
 import com.fleexy.dubbo.gmall.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    @Reference
+    @Reference(version = "1.0.0", stub = "com.fleexy.dubbo.gmall.service.stub.UserServiceStub")
     UserService userService;
 
     @Override

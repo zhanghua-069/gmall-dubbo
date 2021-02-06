@@ -7,11 +7,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl02 implements UserService {
 
     @Override
     public List<UserAddress> getUserAddressList(String userId) {
-        System.out.println("UserServiceImpl.....01...");
+        System.out.println("UserServiceImpl.....02...");
         try {
             TimeUnit.SECONDS.sleep(4L);
         } catch (InterruptedException e) {
