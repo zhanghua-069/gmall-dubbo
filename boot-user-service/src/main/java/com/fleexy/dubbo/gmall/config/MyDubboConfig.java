@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Collections;
 
 @Slf4j
-@Configuration
+//@Configuration
 public class MyDubboConfig {
 
     //<dubbo:application name="boot-user-service"></dubbo:application>
